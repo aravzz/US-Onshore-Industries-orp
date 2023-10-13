@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Raleway:wght@300&display=swap');
+
+*{
+margin:0;
+padding: 0;
+scroll-behavior: smooth;
+box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+        
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+        display: grid;
+        grid-template-rows: 33em 15em 30em 15em 2em 10em;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "intro"
+        "aboutus"
+        "value"
+        "product"
+        "contact"
+        "footer";
+        line-height: 1.56;
+        gap: 4rem;
+               
+}
+
+section{
+    margin-top: 2em;
+}
+
+header{
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 33em;
+    transform-style: preserve-3d;
+    z-index: -1;
+    overflow-y: hidden;
+    overflow-x: hidden;
+} 
+
+nav {
+	grid-area: nav;
+    position: fixed;
+    top: 0;
+    right: 1em;
+    width: 100%;
+    padding: 1em 3em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;;
+    margin-bottom: 2em;
+    
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav ul li {
+    list-style: none;
+    margin-left: 20px;
+
+}
+
+nav ul li a {
+text-decoration: none;
+padding: 6px 15px;
+color: #000;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 500;
+border-radius: 3rem;
+box-shadow: 0.5rem 0.5rem 1rem gray;
+background: #fff;
+}
+
+nav ul li a:hover {
+    
+    box-shadow: 0.5rem 0.5rem 0.7rem gray;
+    border-radius: 20px;
+    transition: ease 0.2ms;
+}
+
+/* END OF NAV */
+
+
+
+h2{
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+#intro {
+    text-align: center;
+    padding: 0;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    letter-spacing: 0;
+    line-height: 1.2;
+}    
+
+#intro img{
+    position: absolute;
+    width: 75vw;
+    min-height: 70vh;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-5px) scale(2);
+    opacity: 0.8;
+    resize: horizontal;
+    margin-bottom: 7rem;
+}
+
+#intro h1{
+margin-top: 1em;
+font-size: 4rem;
+text-shadow: 0.2rem 0.2rem 0.4rem #fff;
+font-weight: 700;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+#intro p{
+    font-size: 1.8rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #fff;
+    text-decoration-color: #fff;
+}
+
+main {
+    padding: 0 4em;
+}
+
+#aboutus{
+grid-area: aboutus;
+margin-top: 1em;
+}
+
+#value{
+grid-area: value;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 3rem 7rem;
+grid-template-areas: "header header header"
+                     "vision mision quality";
+gap: 3.5rem 1.5rem;
+margin: 3rem 0;
+min-height: 28em;
+}
+
+#value h2{
+    grid-area: header;
+    text-align: center;
+}
+
+#value div{
+    display: flex;
+    flex-direction: column;
+}
+
+#value div h3{
+    text-align: center;
+    color: #392F5A;
+    text-transform: uppercase;
+}
+
+#product{
+grid-area: product;
+text-align: center;
+
+}
+
+#product .product-showc{
+    display: grid;
+grid-template-columns: repeat(5,1fr);
+grid-template-rows: repeat(2,1fr);
+margin: 0 auto;
+}
+
+#product .product-showc li{
+place-items: center;
+place-content: center;
+list-style: none;
+}
+
+#product .product-showc li img{
+    max-width: 8em;
+    max-height: 8em;
+}
+
+#contact{
+    grid-area: contact;
+}
+
+footer {
+grid-area: footer;
+position: relative;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-height: 15em;
+    background-color: black;
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: 0;
+    color: lightgray;
+}
+
+footer .col
+{
+    display: flex;
+    flex-direction: column;
+    margin: 2em 2.5em;
+}
+
+footer .col ul
+{
+    list-style: none;
+    
+}
+
+footer .col ul li a
+{
+    color: gray;
+    text-decoration: none;
+}
+
+footer .col ul li a:hover
+{
+color: #fff;
+}
+
+
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+@media(max-width:800px){
+
+    .wrapper{
+        text-align: center;
+        grid-template-rows: 15em 45em 35em 35em 35em 15em;
+        grid-template-columns: 100vw;
+        overflow-x: hidden;
+    }
+    
+    #intro h1{
+        font-size: 3ch;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 2rem;
+    }
+}
+
+
