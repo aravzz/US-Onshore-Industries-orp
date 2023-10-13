@@ -121,7 +121,7 @@ h2{
 
 #intro img{
     position: absolute;
-    width: 75vw;
+    width: 70vw;
     min-height: 70vh;
     object-fit: cover;
     z-index: -1;
